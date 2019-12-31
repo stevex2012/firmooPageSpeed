@@ -15,9 +15,15 @@ TTFB:Time to First Byte 的缩写，指的是浏览器开始收到服务器响�
 
 2.排查浏览器cookie，删除不必要多余cookie
 
+3.优化node路由
 
 ## 阶段二：建立图片处理服务器
 
+根据图片格式，和图片尺寸白名单，处理图片，存储s3，根据不同图片展示区域大小，请求与之最匹配尺寸大小图片。
 
 
 ## 阶段三：优化精简css文件
+
+使用css in jsx的写法书写css，去掉import xxx.css引用方法（这种写法导致项目里面所有的css文件都被打包在common.xxx.css 和 chunck.xxx.css里面，第一次加载的时候回全部加载），无法按需加载。
+
+### f12 --> network  --> doc 的time时间主要是 dnslook+ ssl + TTFB + content Download. 还可以通过精简html结构，较小html体积大小减少下载时间
