@@ -26,4 +26,4 @@ TTFB:Time to First Byte 的缩写，指的是浏览器开始收到服务器响�
 
 使用css in jsx的写法书写css，去掉import xxx.css引用方法（这种写法导致项目里面所有的css文件都被打包在common.xxx.css 和 chunck.xxx.css里面，第一次加载的时候回全部加载），无法按需加载。
 
-### f12 --> network  --> doc 的time时间主要是 dnslookup+ ssl + TTFB + content Download. 还可以通过精简html结构，减少html体积大小减少下载时间
+### f12 --> network  --> doc 面板下的time时间是由 dnslookup+ ssl + TTFB + content Download. 还可以通过精简html结构，减少html体积大小减少下载时间
